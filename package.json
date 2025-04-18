@@ -1,0 +1,45 @@
+{
+  "name": "zealy-hodl-api",
+  "version": "1.0.0",
+  "description": "API to verify token holdings for Zealy quests",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "test": "set \"TEST_MODE=true\" && node server.js",
+    "test:zero": "set \"TEST_MODE=true\" && set \"TEST_ZERO_BALANCE=true\" && node server.js",
+    "test:success": "set \"TEST_MODE=true\" && set \"FORCE_TEST_RESULT=success\" && node server.js",
+    "test:failure": "set \"TEST_MODE=true\" && set \"FORCE_TEST_RESULT=failure\" && node server.js",
+    "test:50": "set \"TEST_MODE=true\" && set \"TEST_SUCCESS_RATE=50\" && node server.js",
+    "test:90": "set \"TEST_MODE=true\" && set \"TEST_SUCCESS_RATE=90\" && node server.js",
+    
+    "ethereum": "set \"NETWORK=ethereum\" && node server.js",
+    "sepolia": "set \"NETWORK=sepolia\" && node server.js",
+    "base": "set \"NETWORK=base\" && node server.js",
+    "bsc": "set \"NETWORK=bsc\" && node server.js",
+    
+    "test:ethereum": "set \"TEST_MODE=true\" && set \"NETWORK=ethereum\" && node server.js",
+    "test:sepolia": "set \"TEST_MODE=true\" && set \"NETWORK=sepolia\" && node server.js",
+    "test:base": "set \"TEST_MODE=true\" && set \"NETWORK=base\" && node server.js",
+    "test:bsc": "set \"TEST_MODE=true\" && set \"NETWORK=bsc\" && node server.js"
+  },
+  "dependencies": {
+    "dotenv": "^16.5.0",
+    "ethers": "^6.13.5",
+    "express": "^5.1.0"
+  },
+  "devDependencies": {
+  },
+  "license": "MIT",
+  "author": "0xcircuitbreaker (Star System Labs)",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/star-system-labs/zealy-hodl-api"
+  },
+  "keywords": [
+    "zealy",
+    "ethereum",
+    "token",
+    "hodl",
+    "api"
+  ]
+}
