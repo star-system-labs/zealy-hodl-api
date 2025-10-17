@@ -140,7 +140,9 @@ function validateSignatureCounts() {
     return;
   }
 
-  if (signatureValidationCount < requiredValidations && app.mountpath) {
+  const isRootApp = !app.mountpath || app.mountpath === '/';
+
+  if (signatureValidationCount < requiredValidations && !isRootApp) {
     throw new Error("Security signature validation failure");
   }
 }
