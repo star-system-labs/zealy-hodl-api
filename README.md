@@ -66,23 +66,6 @@ You can connect to multiple networks by setting the appropriate environment vari
 | NETWORK_NAME | Network name displayed in responses          |
 
 For each supported network, add RPC URL and token address:
-```
-# Ethereum Mainnet (default)
-RPC_URL=https://mainnet.infura.io/v3/your-key
-TOKEN_ADDRESS=0x...
-
-# Sepolia Testnet
-SEPOLIA_RPC_URL=https://sepolia.infura.io/v3/your-key
-SEPOLIA_TOKEN_ADDRESS=0x...
-
-# Base L2
-BASE_RPC_URL=https://mainnet.base.org
-BASE_TOKEN_ADDRESS=0x...
-
-# Binance Smart Chain
-BSC_RPC_URL=https://bsc-dataseed.binance.org
-BSC_TOKEN_ADDRESS=0x...
-```
 
 To switch networks, simply change the `NETWORK` value in your .env file or when running the server:
 ```bash
